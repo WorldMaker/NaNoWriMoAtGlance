@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>{% load static %}
+    <title>National Novel Writing Month At a Glance</title>
+    <meta name="application-name" content="NaNoWriMoAtGlance" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-square70x70logo" content="{% static 'livetiles/tiny.png' %}" />
+    <meta name="msapplication-square150x150logo" content="{% static 'livetiles/square.png' %}" />
+    <meta name="msapplication-wide310x150logo" content="{% static 'livetiles/wide.png' %}" />
+    <meta name="msapplication-square310x310logo" content="{% static 'livetiles/large.png' %}" />
+    <meta name="msapplication-notification" content="frequency=30;polling-uri={{ tile1uri }}{% if tile2uri %};polling-uri2={{ tile2uri }}{% if tile3uri %};polling-uri3={{ tile3uri }}{% endif %}{% endif %}"/>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            background: black;
+            color: white;
+            height: 100%;
+            font-family: Typewriter, Courier New, Courier;
+        }
+    </style>
+</head>
+
+<body>
+<p><strong>National Novel Writing Month At a Glance</strong>
+   | {{ tile1.name }}{% if tile1.has_source %}: {{ tile1source}}{% endif %}
+   | {{ tile2.name }}{% if tile2.has_source %}: {{ tile2source}}{% endif %}
+   | {{ tile3.name }}{% if tile3.has_source %}: {{ tile3source}}{% endif %}
+</p>
+
+<iframe src="http://nanowrimo.org/" style="width: 100%; height: 90%;"/>
+
+</body>
+</html>
