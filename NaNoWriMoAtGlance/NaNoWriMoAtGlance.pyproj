@@ -7,6 +7,8 @@
     <RootNamespace>NaNoWriMoAtGlance</RootNamespace>
     <InterpreterId>{317d00be-5553-41c8-8b65-2a44d46d1aa3}</InterpreterId>
     <InterpreterVersion>2.7</InterpreterVersion>
+    <NameOfLastUsedPublishProfile>nanowrimoatglance - Web Deploy</NameOfLastUsedPublishProfile>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -84,6 +86,9 @@
     <Content Include="NaNoWriMoAtGlance\livetiles\templates\livetiles\tile_r.xml" />
     <Content Include="NaNoWriMoAtGlance\livetiles\templates\livetiles\tile_s.xml" />
     <Content Include="README.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <ProjectExtensions>
