@@ -1,0 +1,19 @@
+<tile>
+  {% load humanize %}
+  <visual lang="en-US" version="2">
+    <binding template="TileSquare150x150Block">
+      <text id="1">{{ daynumber }}</text>
+      <text id="2">{{ words|intcomma }}</text>
+    </binding>
+    <binding template="TileWide310x150BlockAndText01">
+      <text id="1">Today's Goal</text>
+      <text id="5">{{ daynumber }}</text>
+      <text id="6">{{ words|intcomma }}</text>
+    </binding>
+    <binding template="TileSquare310x310BlockAndText01">
+      <text id="1">Today's Goal</text>
+      <text id="8">{{ daynumber }}</text>
+      <text id="9">{{ words|intcomma }}</text>
+    </binding>
+  </visual>
+</tile>

@@ -1,0 +1,17 @@
+<tile>{% load humanize %}
+  <visual lang="en-US" version="2">
+    <binding template="TileSquare150x150Text02">
+      <text id="1">{{ rname }}</text>
+      <text id="2">{{ region_wordcount|intcomma }} by {{ numparticipants|intcomma }}</text>
+    </binding>
+    <binding template="TileWide310x150Text09">
+      <text id="1">{{ rname }}</text>
+      <text id="2">{{ region_wordcount|intcomma }} words by {{ numparticipants|intcomma }} people</text>
+    </binding>
+    <binding template="TileSquare310x310Text09">
+      <text id="1">{{ rname }}</text>
+      <text id="2">{{ region_wordcount|intcomma }} words</text>
+      <text id="3">{{ numparticipants|intcomma }} people</text>
+    </binding>
+  </visual>
+</tile>
