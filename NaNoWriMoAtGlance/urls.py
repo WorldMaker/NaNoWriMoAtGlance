@@ -1,11 +1,10 @@
-from django.conf.urls import patterns, include, url
-import settings
+from django.conf.urls import include, url
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = [
     url('^', include('NaNoWriMoAtGlance.livetiles.urls')),
 
     # Examples:
@@ -17,4 +16,4 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-)
+]
