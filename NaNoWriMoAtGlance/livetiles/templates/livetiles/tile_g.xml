@@ -3,25 +3,25 @@
   <visual>
     <binding template="TileSmall" hint-textStacking="center">
       <text hint-align="center">{{ words|intcomma }}</text>
-      <text hint-style="captionsubtle" hint-align="center">{{ daynumber }}</text>
+      <text hint-style="captionsubtle" hint-align="center">Day {{ daynumber }}</text>
     </binding>
 
     <binding template="TileMedium" hint-textStacking="center">
       <text hint-style="baseSubtle" hint-align="center">Daily Goal</text>
       <text hint-style="subtitle" hint-align="center">{{ words|intcomma }}</text>
-      <text hint-align="center">{{ daynumber }}</text>
+      <text hint-align="center">Day {{ daynumber }}</text>
     </binding>
 
     <binding template="TileWide" hint-textStacking="center">
       <text hint-style="titleSubtle" hint-align="center">Daily Goal</text>
       <text hint-style="subtitle" hint-align="center">{{ words|intcomma }}</text>
-      <text hint-align="center">{{ daynumber }}</text>
+      <text hint-align="center">Day {{ daynumber }}</text>
     </binding>
 
     <binding template="TileLarge" hint-textStacking="center">
       <text hint-style="titleSubtle" hint-align="center">Daily Goal</text>
       <text hint-style="subtitle" hint-align="center">{{ words|intcomma }}</text>
-      <text hint-align="center">{{ daynumber }}</text>
+      <text hint-align="center">Day {{ daynumber }}</text>
     </binding>
   </visual>
 </tile>
