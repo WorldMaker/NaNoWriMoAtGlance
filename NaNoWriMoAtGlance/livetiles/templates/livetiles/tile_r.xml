@@ -13,7 +13,7 @@
 
     <binding template="TileWide" hint-textStacking="center">
       <text hint-style="titleSubtle" hint-align="center">{{ rname }}</text>
-      <text hint-style="subtitle" hint-align="center">{{{ region_wordcount|intcomma }} words</text>
+      <text hint-style="subtitle" hint-align="center">{{ region_wordcount|intcomma }} words</text>
       <text hint-align="center">{{ numparticipants|intcomma }} people</text>
     </binding>
 
