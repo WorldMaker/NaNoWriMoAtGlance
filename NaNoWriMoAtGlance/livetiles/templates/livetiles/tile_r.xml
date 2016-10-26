@@ -1,17 +1,26 @@
 <tile>{% load humanize %}
-  <visual lang="en-US" version="2">
-    <binding template="TileSquare150x150Text02">
-      <text id="1">{{ rname }}</text>
-      <text id="2">{{ region_wordcount|intcomma }} by {{ numparticipants|intcomma }}</text>
+  <visual>
+    <binding template="TileSmall" hint-textStacking="center">
+      <text hint-align="center">{{ region_wordcount|intcomma }}</text>
+      <text hint-style="captionsubtle" hint-align="center">{{ rname }}</text>
     </binding>
-    <binding template="TileWide310x150Text09">
-      <text id="1">{{ rname }}</text>
-      <text id="2">{{ region_wordcount|intcomma }} words by {{ numparticipants|intcomma }} people</text>
+
+    <binding template="TileMedium" hint-textStacking="center">
+      <text hint-style="baseSubtle" hint-align="center">{{ rname }}</text>
+      <text hint-style="subtitle" hint-align="center">{{ region_wordcount|intcomma }} words</text>
+      <text hint-align="center">{{ numparticipants|intcomma }} people</text>
     </binding>
-    <binding template="TileSquare310x310Text09">
-      <text id="1">{{ rname }}</text>
-      <text id="2">{{ region_wordcount|intcomma }} words</text>
-      <text id="3">{{ numparticipants|intcomma }} people</text>
+
+    <binding template="TileWide" hint-textStacking="center">
+      <text hint-style="titleSubtle" hint-align="center">{{ rname }}</text>
+      <text hint-style="subtitle" hint-align="center">{{{ region_wordcount|intcomma }} words</text>
+      <text hint-align="center">{{ numparticipants|intcomma }} people</text>
+    </binding>
+
+    <binding template="TileLarge" hint-textStacking="center">
+      <text hint-style="titleSubtle" hint-align="center">{{ rname }}</text>
+      <text hint-style="subtitle" hint-align="center">{{ region_wordcount|intcomma }} words</text>
+      <text hint-align="center">{{ numparticipants|intcomma }} people</text>
     </binding>
   </visual>
 </tile>

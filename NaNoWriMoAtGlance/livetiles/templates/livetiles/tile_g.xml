@@ -1,19 +1,27 @@
 <tile>
   {% load humanize %}
-  <visual lang="en-US" version="2">
-    <binding template="TileSquare150x150Block">
-      <text id="1">{{ daynumber }}</text>
-      <text id="2">{{ words|intcomma }}</text>
+  <visual>
+    <binding template="TileSmall" hint-textStacking="center">
+      <text hint-align="center">{{ words|intcomma }}</text>
+      <text hint-style="captionsubtle" hint-align="center">{{ daynumber }}</text>
     </binding>
-    <binding template="TileWide310x150BlockAndText01">
-      <text id="1">Today's Goal</text>
-      <text id="5">{{ daynumber }}</text>
-      <text id="6">{{ words|intcomma }}</text>
+
+    <binding template="TileMedium" hint-textStacking="center">
+      <text hint-style="baseSubtle" hint-align="center">Daily Goal</text>
+      <text hint-style="subtitle" hint-align="center">{{ words|intcomma }}</text>
+      <text hint-align="center">{{ daynumber }}</text>
     </binding>
-    <binding template="TileSquare310x310BlockAndText01">
-      <text id="1">Today's Goal</text>
-      <text id="8">{{ daynumber }}</text>
-      <text id="9">{{ words|intcomma }}</text>
+
+    <binding template="TileWide" hint-textStacking="center">
+      <text hint-style="titleSubtle" hint-align="center">Daily Goal</text>
+      <text hint-style="subtitle" hint-align="center">{{ words|intcomma }}</text>
+      <text hint-align="center">{{ daynumber }}</text>
+    </binding>
+
+    <binding template="TileLarge" hint-textStacking="center">
+      <text hint-style="titleSubtle" hint-align="center">Daily Goal</text>
+      <text hint-style="subtitle" hint-align="center">{{ words|intcomma }}</text>
+      <text hint-align="center">{{ daynumber }}</text>
     </binding>
   </visual>
 </tile>

@@ -14,4 +14,25 @@
       <text id="2">{{ region_wordcount|intcomma }} words</text>
     </binding>
   </visual>
+  <visual>
+    <binding template="TileSmall" hint-textStacking="center">
+      <text hint-align="center">{{ region_wordcount|intcomma }}</text>
+      <text hint-style="captionsubtle" hint-align="center">NaNoWriMo</text>
+    </binding>
+
+    <binding template="TileMedium" hint-textStacking="center">
+      <text hint-style="baseSubtle" hint-align="center">NaNoWriMo</text>
+      <text hint-style="subtitle" hint-align="center">{{ region_wordcount|intcomma }} words</text>
+    </binding>
+
+    <binding template="TileWide" hint-textStacking="center">
+      <text hint-style="titleSubtle" hint-align="center">NaNoWriMo</text>
+      <text hint-style="subtitle" hint-align="center">{{ region_wordcount|intcomma }} words</text>
+    </binding>
+
+    <binding template="TileLarge" hint-textStacking="center">
+      <text hint-style="titleSubtle" hint-align="center">NaNoWriMo</text>
+      <text hint-style="subtitle" hint-align="center">{{ region_wordcount|intcomma }} words</text>
+    </binding>
+  </visual>
 </tile>

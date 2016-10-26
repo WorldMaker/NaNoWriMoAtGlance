@@ -1,17 +1,26 @@
 <tile>{% load humanize %}
-  <visual lang="en-US" version="2">
-    <binding template="TileSquare150x150Text02">
-      <text id="1">{{ uname }}</text>
-      <text id="2">{{ user_wordcount|intcomma }} {% if winner == "true" %}WINNER!{% endif %}</text>
+  <visual>
+    <binding template="TileSmall" hint-textStacking="center">
+      <text hint-align="center">{{ user_wordcount|intcomma }}</text>
+      <text hint-style="captionsubtle" hint-align="center">{{ uname }} {% if winner == "true" %}WINNER!{% endif %}</text>
     </binding>
-    <binding template="TileWide310x150Text09">
-      <text id="1">{{ uname }}</text>
-      <text id="2">{{ user_wordcount|intcomma }} words {% if winner == "true" %}WINNER!{% endif %}</text>
+
+    <binding template="TileMedium" hint-textStacking="center">
+      <text hint-style="baseSubtle" hint-align="center">{{ uname }}</text>
+      <text hint-style="subtitle" hint-align="center">{{ user_wordcount|intcomma }} words</text>
+      {% if winner == "true" %}<text hint-align="center">WINNER!</text>{% endif %}
     </binding>
-    <binding template="TileSquare310x310Text09">
-      <text id="1">{{ uname }}</text>
-      <text id="2">{{ user_wordcount|intcomma }} words</text>
-      {% if winner == "true" %}<text id="3">WINNER!</text>{% endif %}
+
+    <binding template="TileWide" hint-textStacking="center">
+      <text hint-style="titleSubtle" hint-align="center">{{ uname }}</text>
+      <text hint-style="subtitle" hint-align="center">{{ user_wordcount|intcomma }} words</text>
+      {% if winner == "true" %}<text hint-align="center">WINNER!</text>{% endif %}
+    </binding>
+
+    <binding template="TileLarge" hint-textStacking="center">
+      <text hint-style="titleSubtle" hint-align="center">{{ uname }}</text>
+      <text hint-style="subtitle" hint-align="center">{{ user_wordcount|intcomma }} words</text>
+      {% if winner == "true" %}<text hint-align="center">WINNER!</text>{% endif %}
     </binding>
   </visual>
 </tile>
